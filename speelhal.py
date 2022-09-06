@@ -9,5 +9,5 @@ prijsgame = gameseat*tijd*personen
 
 totaal = prijs+prijsgame
 
-print("Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar",totaal, "euro")
+print("Dit geweldige dagje-uit ",personen, "mensen in de Speelhal met 45 minuten VR kost je maar",totaal, "euro")
 
