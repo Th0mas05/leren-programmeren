@@ -11,7 +11,5 @@ aantal = 3
 totaalkortingsbon = (kortingsbon*aantal)
 
 prijs = totaalcroissant+totaalstokbrood
-print(prijs+totaalkortingsbon)
 
-
-
+print("De feestlunch kost je bij de bakker",prijs, "voor de 17 croissantjes en de 2 stokbroden als de 3 kortingsbonnen nog geldig zijn!")

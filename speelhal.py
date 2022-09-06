@@ -1,5 +1,3 @@
-from logging.handlers import TimedRotatingFileHandler
-
 
 personen = 4
 ticket = 7.45
