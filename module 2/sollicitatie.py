@@ -1,5 +1,18 @@
 mogenlijkeKandidaat = False
 
+poepslaaf = input("Wat is jou naam? ")
+if poepslaaf.lower() == "kjeld":
+    raise NameError("Jij bent niet welkom dikzak!")
+
+poepslaaf2 = input("Maagd? ")
+if poepslaaf2.lower() == "ja":
+    raise NameError("Grootste loser ooit!")
+
+poepslaaf3 = input("Support je LGBTQ+? ")
+if poepslaaf3.lower() == "ja":
+    raise NameError("Je bent een schande voor de maatschappij!")
+
+
 print("Hoeveel jaar ervaring heeft met dieren dresuur?")
 dierenDresuurErvaring = int(input())
 
