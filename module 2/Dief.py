@@ -29,22 +29,19 @@ if ant1 in antwoord_ja:
 
 elif ant1 in antwoord_nee:
     print("Nu probeert hij je te vermoorden. Wil je hem neerslaan? (Ja / Nee)")
-
     ant3 = input(">> ")
-
-    ant3 in antwoord_ja
-    print("Ga je een wapen gebruiken? ")
-    wapen = input(">> ")
+    if ant3 in antwoord_ja:
+        print("Ga je een wapen gebruiken? ")
+        wapen = input(">> ")
     
-    if wapen.lower() == "ja":
-        print("Je kijkt in de besteklade wat kies je? Mes, vork of lepel?")
-        soortwapen = input(">>")
-        
-        if soortwapen == "mes" or soortwapen == "vork":
-            print("Gefeliciteerd! Hij was een dief en jij hielp de politie om hem te overmeesteren!")
-        else:
-            print("Sorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
-    
+        if wapen.lower() == "ja":
+            print("Je kijkt in de besteklade wat kies je? Mes, vork of lepel?")
+            soortwapen = input(">> ")
+            
+            if soortwapen == "mes" or soortwapen == "vork":
+                print("Gefeliciteerd! Hij was een dief en jij hielp de politie om hem te overmeesteren!")
+            else:
+                print("Sorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
     else:
         print("Sorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
 else:
