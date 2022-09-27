@@ -1,5 +1,8 @@
+import random
+
 antwoord_ja = ["Ja", "J", "ja", "j"]
 antwoord_nee = ["Nee", "N", "nee", "n"]
+procent = random.randint(1,100)
 
 print("""
 WELKOM! LATEN WE HET AVONTUUR BEGINNEN!!!!
@@ -12,32 +15,37 @@ Bied je hem onderdak?. (Ja / Nee)
 ant1 = input(">> ")
 
 if ant1 in antwoord_ja:
-    print("\nNa 2 minuten komt de politie naar uw huis en vraagt U of de dief in uw huis is of niet. Zeg je (Ja / Nee)?\n")
-
-    ant2 = input(">>")
+    print("Na 2 minuten komt de politie naar uw huis en vraagt U of de dief in uw huis is of niet. Zeg je (Ja / Nee)?")
+    ant2 = input(">> ")
 
     if ant2 in antwoord_ja:
-        print("\nJe bent een eerlijk persoon. Hij was een dief en jij hebt gewonnen!")
+        print("Je bent een eerlijk persoon. Hij was een dief en jij hebt gewonnen!")
 
-    elif ant2 in antwoord_nee:
-        print("\nJe hebt een dief geholpen en je gaat nu naar de gevangenis. GAMEOVER!")
-
+    elif procent < 50:
+        ant2 in antwoord_nee
+        print("Je hebt een dief geholpen en je gaat nu naar de gevangenis. GAMEOVER!")
     else:
-        print("\nGeen valide antwoord!")
+        print("Je hebt een dief geholpen, maar de politie kwam er niet achter! Je hebt een deel van de buit gekregen als beloning.")
 
 elif ant1 in antwoord_nee:
-    print("\nNu probeert hij je te vermoorden. Wil je hem neerslaan? (Ja / Nee)\n")
+    print("Nu probeert hij je te vermoorden. Wil je hem neerslaan? (Ja / Nee)")
 
     ant3 = input(">> ")
 
-    if ant3 in antwoord_ja:
-        print("\nGefeliciteerd! Hij was een dief en jij hielp de politie om hem te pakken met je moed.")
-
-    elif ant3 in antwoord_nee:
-        print("\nSorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
-
+    ant3 in antwoord_ja
+    print("Ga je een wapen gebruiken? ")
+    wapen = input(">> ")
+    
+    if wapen.lower() == "ja":
+        print("Je kijkt in de besteklade wat kies je? Mes, vork of lepel?")
+        soortwapen = input(">>")
+        
+        if soortwapen == "mes" or soortwapen == "vork":
+            print("Gefeliciteerd! Hij was een dief en jij hielp de politie om hem te overmeesteren!")
+        else:
+            print("Sorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
+    
     else:
-        print("\nGeen valide antwoord!")
-
+        print("Sorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
 else:
-    print("\nGeen valide antwoord!")
+    print("Geen valide antwoord!")
