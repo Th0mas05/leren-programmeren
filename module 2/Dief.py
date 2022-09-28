@@ -15,7 +15,7 @@ Bied je hem onderdak?. (Ja / Nee)
 ant1 = input(">> ")
 
 if ant1 in antwoord_ja:
-    print("Na 2 minuten komt de politie naar uw huis en vraagt U of de dief in uw huis is of niet. Zeg je (Ja / Nee)?")
+    print("Na 2 minuten komt de politie naar uw huis en vraagt U of een dief in uw huis heeft?. Zeg je (Ja / Nee)?")
     ant2 = input(">> ")
 
     if ant2 in antwoord_ja:
@@ -30,11 +30,12 @@ if ant1 in antwoord_ja:
 elif ant1 in antwoord_nee:
     print("Nu probeert hij je te vermoorden. Wil je hem neerslaan? (Ja / Nee)")
     ant3 = input(">> ")
+
     if ant3 in antwoord_ja:
         print("Ga je een wapen gebruiken? ")
         wapen = input(">> ")
     
-        if wapen.lower() == "ja":
+        if wapen in antwoord_ja:
             print("Je kijkt in de besteklade wat kies je? Mes, vork of lepel?")
             soortwapen = input(">> ")
             
@@ -42,7 +43,10 @@ elif ant1 in antwoord_nee:
                 print("Gefeliciteerd! Hij was een dief en jij hielp de politie om hem te overmeesteren!")
             else:
                 print("Sorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
+                
+        elif wapen in antwoord_nee:
+            print("Sorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
     else:
-        print("Sorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
+            print("Sorry! Je bent dood. Hij was een dief en hij heeft jou vermoord. GAME OVER")
 else:
     print("Geen valide antwoord!")
