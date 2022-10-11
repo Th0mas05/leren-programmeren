@@ -1,9 +1,9 @@
-x = 1
-y = 1
-while x <= 12:
-    print(f'{x}AM')
-    x = x +1
+i = int(0)
+b = int(0)
+while i <13:
+    print (str(i) + " AM")
+    i += 1 
 
-while y <= 12:
-    print(f'{y }PM')  
-    y = y + 1
+while b <13:
+    print (str(b) + " PM")
+    b += 1 
