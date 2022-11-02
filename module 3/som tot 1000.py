@@ -1,6 +1,6 @@
-som = int(50)
-totaal = int(50)
-nummer = int(51)
+som = 50
+totaal = 50
+nummer = 51
 while totaal < 1000:
     totaal = totaal + nummer
     som = str(som) + " + " + str(nummer)
