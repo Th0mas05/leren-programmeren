@@ -1,6 +1,5 @@
 import time 
 
-
 x = 30
 
 while x > 0:

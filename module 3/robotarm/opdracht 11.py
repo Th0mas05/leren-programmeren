@@ -1,12 +1,29 @@
 from RobotArm import RobotArm
 robotArm = RobotArm('exercise 11')
-for i in range(8,0,-1):
-        if i % 2 == 0:
-            robotArm.grab()
-            for y in range(i):
-                robotArm.moveRight()
+border = 0
+robotArm.speed = 3
+for i in range(0,8):
+    robotArm.moveRight()
+while True:
+    if border < 9:
+        robotArm.grab()
+        color = robotArm.scan()
+        if color == ("white"):
+            robotArm.moveRight()
+            robotArm.drop()
+            robotArm.moveLeft()
+            robotArm.moveLeft()
+            border += 1
+            print(border)
         else:
             robotArm.drop()
-            for p in range(i):
-                robotArm.moveLeft()
+            robotArm.moveLeft()
+            border += 1
+            print(border)
+    
+    else:
+        break
+
+
+
 robotArm.wait()
