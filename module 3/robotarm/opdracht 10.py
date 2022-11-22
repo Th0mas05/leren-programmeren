@@ -11,3 +11,4 @@ for blok in range(5):
     for y in range(x):
      robotArm.moveLeft()
     x -= 1
+robotArm.wait()

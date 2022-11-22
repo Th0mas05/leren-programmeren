@@ -2,7 +2,7 @@ from RobotArm import RobotArm
 # Let op: hier start het anders voor een random level:
 robotArm = RobotArm()
 robotArm.randomLevel(1,7)
-robotArm.speed = 3
+robotArm.speed = 1
 # Jouw python instructies zet je vanaf hier:
 position = 1
 for i in range(0,9):
