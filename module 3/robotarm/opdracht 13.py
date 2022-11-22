@@ -4,16 +4,17 @@ robotArm = RobotArm()
 robotArm.randomLevel(1,7)
 robotArm.speed = 3
 # Jouw python instructies zet je vanaf hier:
-a = 7
-for i in range(6):
+position = 1
+for i in range(0,9):
     robotArm.grab()
-    if robotArm.scan == "red" or "blue" or "yellow" or "white" or "green":
-        for x in range(a):
+    color = robotArm.scan()
+    if color != (""):
+        for i in range(0,position):
             robotArm.moveRight()
         robotArm.drop()
-        for c in range(a):
+        position += 1
+        for i in range(0,position-1):
             robotArm.moveLeft()
-        a-= 1
     else:
         robotArm.wait()
 
