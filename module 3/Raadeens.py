@@ -1,63 +1,32 @@
 import random
-i = random.randint(1,1000)
 
-Pogingen = 9
-punten = 1
+laag = 1
+hoog = 1000
+round = 0
+score = 0
 
-a = i + 50
-b = i + 20
-c = i - 50
-d = i - 20
-e = i + 51
-f = i - 51
-
-
-
-while Pogingen == 0 or punten < 20:
-    print("gok een nummer tussen 1 en 1000 , als u wilt stoppen typ stop")
-    gok = int(input("gok een nummer: "))
-    if gok == i :
-        punten += 1
-        print("geraden! U heeft nu " , punten , "punt!")
+# loop waarmee je alle 20 rondes uitvoert
+while round < 20:
+    round += 1
+    count = 0
+    num = random.randint(laag, hoog)
+    
+    print("Ronde ", round)
+    if round < 19:
         print("Nog een getal raden?")
-        i = random.randint(1,1000)
-        if punten == 20:
-            break
-    elif gok == "stop":
-        break
-    elif gok > e :
-        print("Uw gok is hoger! U mag",  Pogingen , "raden")
-        Pogingen -= 1
-        if Pogingen == 0:
-            break
-    elif gok < f :
-        print("Uw gok is lager! U mag",  Pogingen , "raden")
-        Pogingen -= 1
-        if Pogingen == 0:
-            break
-    elif gok < a and gok > b :
-        print("U bent warm! U mag",  Pogingen , "raden")
-        Pogingen -= 1
-        if Pogingen == 0:
-            break
-    elif gok < b and gok > i :
-        print("U bent heel warm! U mag", Pogingen , "raden")
-        Pogingen -= 1
-        if Pogingen == 0:
-            break
-    elif gok  > c and gok < d :
-        print("U bent warm! U mag",  Pogingen , "raden")
-        Pogingen -= 1
-        if Pogingen == 0:
-            break
-    elif gok > d and gok < i :
-        print("U bent heel warm!  U mag",  Pogingen , "raden")
-        Pogingen -= 1
-        if Pogingen == 0:
-            break
-if punten == 20:
-    print("Goed gedaan! u bent klaar , uw eindscore is" , punten)
-elif gok == 00:
-    print("U bent gestopt met de game")
-else:
-    print("Helaas , U heeft verloren")
+
+    while count < 10:
+	    count += 1
+
+    gok = int(input("Gok een nummer: "))
+    
+    if num == gok:
+            print("Goed gedaan! Je hebt ",count, " gokken gedaan voordat je het goed had. Score: ", score)
+    elif num > gok:
+            print("Je hebt te klein gegokt!")
+    elif num < gok:
+            print("Je hebt te hoog gegokt!")
+
+    if count >= 10:
+        print("Het nummer was", num)
+        print("Veel geluk voor de volgende keer!")
