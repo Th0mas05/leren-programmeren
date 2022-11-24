@@ -6,8 +6,7 @@ for raden in range(0, 20):
     getal = random.randint(1,1000)
     
     for vraag in range(0, 10):
-        print()
-        invoer = int(input("Gok een getal tussen de 1 en de 1000?\n\n>> "))
+        invoer = int(input("Gok een getal tussen de 1 en de 1000\n\n>> "))
         
         if invoer > getal:
             print("Lager!")
