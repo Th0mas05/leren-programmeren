@@ -11,7 +11,7 @@ for i in range(0,9):
     if color != (""):
         for i in range(0,position):
             robotArm.moveRight()
-        robotArm.drop()
+        robotArm.drop() 
         position += 1
         for i in range(0,position-1):
             robotArm.moveLeft()
