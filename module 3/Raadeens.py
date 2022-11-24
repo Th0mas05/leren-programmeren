@@ -1,32 +1,36 @@
 import random
-
-laag = 1
-hoog = 1000
-round = 0
 score = 0
 
-# loop waarmee je alle 20 rondes uitvoert
-while round < 20:
-    round += 1
-    count = 0
-    num = random.randint(laag, hoog)
+for raden in range(0, 20):
     
-    print("Ronde ", round)
-    if round < 19:
-        print("Nog een getal raden?")
-
-    while count < 10:
-	    count += 1
-
-    gok = int(input("Gok een nummer: "))
+    getal = random.randint(1,1000)
     
-    if num == gok:
-            print("Goed gedaan! Je hebt ",count, " gokken gedaan voordat je het goed had. Score: ", score)
-    elif num > gok:
-            print("Je hebt te klein gegokt!")
-    elif num < gok:
-            print("Je hebt te hoog gegokt!")
+    for vraag in range(0, 10):
+        print()
+        invoer = int(input("Gok een getal tussen de 1 en de 1000?\n\n>> "))
+        
+        if invoer > getal:
+            print("Lager!")
+        elif invoer < getal:
+            print("Hoger!")
+        if invoer == getal:
+            print("Geraden!")
+            score = score + 1
+            break
+        elif invoer > getal - 20 and invoer < getal + 20:
+            print("Je poten staan in de fik zo dichtbij ben je!")
+        elif invoer > getal - 50 and invoer < getal + 50:
+            print("De thermostaat slaat op hol, want je bent warm!")
+        
+        print(getal)
 
-    if count >= 10:
-        print("Het nummer was", num)
-        print("Veel geluk voor de volgende keer!")
+    print()      
+    print("Het getal was", getal)
+    print("Je hebt momenteel", score, "punt(en) gescoord!")
+    print()
+    invoer2 = input("Wil je nog een getal raden? Ja of Nee!\n\n>> ").lower()
+    if invoer2 == "nee" and raden < 19:
+        print("Eindscore:", score, "punt(en)")
+        break
+    else:
+        print(score)
