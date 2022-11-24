@@ -4,7 +4,7 @@ score = 0
 for raden in range(0, 20):
     
     getal = random.randint(1,1000)
-    
+    print(getal)
     for vraag in range(0, 10):
         invoer = int(input("Gok een getal tussen de 1 en de 1000?\n\n>> "))
         
@@ -17,9 +17,9 @@ for raden in range(0, 20):
             score = score + 1
             break
         elif invoer > getal - 20 and invoer < getal + 20:
-            print("Je bent warm")
-        elif invoer > getal - 50 and invoer < getal + 50:
             print("Je bent heel warm")
+        elif invoer > getal - 50 and invoer < getal + 50:
+            print("Je bent warm")
 
     print()      
     print("Het getal was", getal)
