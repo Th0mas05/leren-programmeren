@@ -1,5 +1,5 @@
 from fruitmand import fruitmand
 
 fruitmand.pop(4)
-for i in fruitmand:
+for i in range(0,len(fruitmand)):
   print(fruitmand[i]['color'])
