@@ -6,7 +6,7 @@ gewicht = []
 
 for i in fruitmand:
     naam.append(i['name'])
-naam.sort(key=len, reverse=True)
+naam.sort(key=len, reverse=True) #de gesorteerde lijst is in aflopende volgorde
 
 for i in fruitmand:
     if i['name'] == naam[0]:
