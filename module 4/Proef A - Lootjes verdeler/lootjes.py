@@ -1,31 +1,31 @@
 from random import shuffle
 
-namen = []
-aantal = len(namen)
+namen_lijst = []
+aantal = len(namen_lijst)
 deelnemers = False
 
 while aantal < 3:
     print(f"voeg minimaal {3 - aantal} namen toe")
-    voegnaam = input("Voeg een naam toe:\n\n>> ").capitalize()
-    if voegnaam in namen:
+    voegnaamtoe = input("Voeg een naam toe:\n\n>> ").capitalize()
+    if voegnaamtoe in namen_lijst:
         print("Naam bestaat al\n")
     else:
-        namen.append(voegnaam)
-        aantal = len(namen)
+        namen_lijst.append(voegnaamtoe)
+        aantal = len(namen_lijst)
 
 while not deelnemers:
     print("type quit om te stoppen\n")
-    voegnaam = input("Voeg nog een naam toe:\n\n>> ").capitalize()
-    if voegnaam.lower() == "quit":
+    voegnaamtoe = input("Voeg nog een naam toe:\n\n>> ").capitalize()
+    if voegnaamtoe.lower() == "quit":
         break
-    elif voegnaam in namen:
+    elif voegnaamtoe in namen_lijst:
         print("Naam bestaat al\n")
     else:
-        namen.append(voegnaam)
+        namen_lijst.append(voegnaamtoe)
 
-shuffle(namen)
+shuffle(namen_lijst)
 
-persoon = namen[-1]
-for mensen in namen:
+persoon = namen_lijst[-1]
+for mensen in namen_lijst:
     print(f"{persoon} heeft {mensen} getrokken\n")
     persoon = mensen
