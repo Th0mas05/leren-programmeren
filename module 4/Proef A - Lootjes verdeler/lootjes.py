@@ -6,7 +6,7 @@ deelnemers = False
 
 while aantal < 3:
     print(f"voeg minimaal {3 - aantal} namen toe")
-    voegnaam = input("Voeg een naam toe:\n\n>> ")
+    voegnaam = input("Voeg een naam toe:\n\n>> ").capitalize()
     if voegnaam in namen:
         print("Naam bestaat al\n")
     else:
@@ -15,7 +15,7 @@ while aantal < 3:
 
 while not deelnemers:
     print("type quit om te stoppen\n")
-    voegnaam = input("Voeg nog een naam toe:\n\n>> ")
+    voegnaam = input("Voeg nog een naam toe:\n\n>> ").capitalize()
     if voegnaam.lower() == "quit":
         break
     elif voegnaam in namen:
