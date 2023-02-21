@@ -4,11 +4,8 @@ COST_FOOD_HUMAN_COPPER_PER_DAY = 4
 COST_FOOD_HORSE_COPPER_PER_DAY = 3
 COST_TENT_GOLD_PER_WEEK = 3
 COST_HORSE_SILVER_PER_DAY = 5
-NUMBER_OF_PEOPLE_FOR_ONE_HORSE = 2
-NUMBER_OF_PEOPLE_FOR_ONE_TENT = 3
 COST_INN_HUMAN_SILVER_PER_NIGHT = 3
 COST_INN_HORSE_COPPER_PER_NIGHT = 4
-
 #data
 mainCharacter = {
     'name' : 'Pieter Visser',
@@ -190,7 +187,6 @@ investors = [{
     }
 }]
 
-
 treasure = [{
     'name' : 'Koper',
     'amount' : 239,
@@ -245,7 +241,7 @@ treasure = [{
     'unit' : '',
     'price' : {
         'amount' : 9,
-        'type' : 'siver'
+        'type' : 'silver'
     }
 },{
     'name' : 'Armbanden',
